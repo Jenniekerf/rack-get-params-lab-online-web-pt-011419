@@ -10,7 +10,7 @@ class Application
     if @@cart.empty?
       resp.write "Your cart is empty"
     else 
-      @@cart
+      @@cart.select {|items| resp.write "#{items}"}
     end
 
     if req.path.match(/items/)
