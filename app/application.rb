@@ -1,3 +1,5 @@
+require "pry"
+
 class Application
 
   @@items = ["Apples","Carrots","Pears"]
@@ -10,6 +12,7 @@ class Application
     
 
     if req.path.match(/items/)
+      binding.pry
       @@items.each do |item|
         resp.write "#{item}\n"
       end
@@ -32,8 +35,7 @@ class Application
       end
     else
       resp.write "Path Not Found"
-    
-end
+    end
     resp.finish
   end
 
