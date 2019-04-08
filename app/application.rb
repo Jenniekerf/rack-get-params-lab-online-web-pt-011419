@@ -23,6 +23,7 @@ class Application
       resp.write handle_search(search_term)
     else
       resp.write "Path Not Found"
+      resp.write "added Figs"
     end
 
     resp.finish
