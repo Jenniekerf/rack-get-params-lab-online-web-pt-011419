@@ -2,7 +2,7 @@ class Application
 
   @@items = ["Apples","Carrots","Pears"]
   @@cart = []
-  @@cart << @@items
+  @@cart << @@items if @@items
 
   def call(env)
     resp = Rack::Response.new
